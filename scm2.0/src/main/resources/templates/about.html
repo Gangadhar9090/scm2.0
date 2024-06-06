@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> this is about Page</h1>
+    <hr />
+    <div class="host-tag" th:replace="${isLogin} ? ~{base :: parent(~{::p})} : ~{base :: test(~{::#not_logged_in})}">
+       <p>
+        login is done
+       </p>
+       <section id="not_logged_in">
+        <h1> login is not done</h1>
+       </section>
+    </div>
+   
+</body>
+</html>
